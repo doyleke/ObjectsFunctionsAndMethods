@@ -3,12 +3,12 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Kayleigh Doyle.
 """
 
 ########################################################################
 #
-# TODO: 1. PUT YOUR NAME IN THE ABOVE LINE and...
+# DONE: 1. PUT YOUR NAME IN THE ABOVE LINE and...
 #
 #   Allow this file to use the rosegraphics.py file by marking the src
 #   directory as a "Sources Root".  Do that by right clicking on the src folder,
@@ -34,9 +34,12 @@ def main():
     window = rg.TurtleWindow()
 
     turtle1()
+    turtle4()
+    turtle5()
     turtle3()
     turtle2()
     turtle2()
+
 
     window.close_on_mouse_click()
 
@@ -103,9 +106,50 @@ def turtle3():
     maja.end_fill()
 
 
+def turtle4():
+    """
+    Constructs another default SimpleTurtle.
+    Does some not too fancy stuff.
+    """
+    darby = rg.SimpleTurtle()
+    darby.pen = rg.Pen('yellow',10)
+
+    darby.speed = 20
+    darby.backward(240)
+    darby.draw_regular_polygon(5,20)
+    darby.end_fill()
+
+
+def turtle5():
+    """
+    creates two simple turtles and makes them do stuff
+    :return:
+    """
+    susan = rg.SimpleTurtle()
+    susan.pen = rg.Pen('red',30)
+
+    susan.speed = 20
+    susan.pen_up()
+    susan.right(90)
+    susan.forward(200)
+    susan.pen_down()
+    susan.draw_regular_polygon(8,50)
+
+    terry = rg.SimpleTurtle('turtle')
+
+    for k in range(20):
+
+        terry.pen = rg.Pen('purple',20)
+        r = 20+k
+        terry.speed = 20
+        terry.draw_circle(r)
+        terry.forward(5*k)
+
+
+
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
@@ -115,18 +159,18 @@ def turtle3():
 #     -- How many times does   main   call the   turtle1   function?
 #            (Answer: 1)
 #     -- How many times does   main   call the   turtle2   function?
-#            (Hint: the answer is NOT 1.)
+#            (Hint: the answer is NOT 1.) 2
 #     -- What line of code calls the   main   function?
-#            (Answer: look at the LAST line of this module, far below.)
+#            (Answer: look at the LAST line of this module, far below.) 225
 #
 #     ** ASK QUESTIONS if you are uncertain. **
 #
 #   RELATE what is DRAWN to the CODE above.  Be sure you understand:
-#       -- WHEN does the code in   main   run?
-#       -- WHEN does the code in   turtle1   run?
-#                    the code in   turtle2   run?
-#                    the code in   turtle3   run?
-#       -- For each of the above, WHY does that code run when it does?
+#       -- WHEN does the code in   main   run? Every time it goes back after completing a task
+#       -- WHEN does the code in   turtle1   run? When first called
+#                    the code in   turtle2   run? After turtle3 then again
+#                    the code in   turtle3   run? After turtle1
+#       -- For each of the above, WHY does that code run when it does? It jumps back to main after completing
 #
 #     ** ASK QUESTIONS if you are uncertain. **
 #
@@ -137,7 +181,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -167,7 +211,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
@@ -183,7 +227,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   The previous two TODOs IMPLEMENTED a function (TO DO 3)
 #   and TESTED that function (TO DO 4).
 #
