@@ -171,20 +171,32 @@ def lines():
     # ------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     # ------------------------------------------------------------------
-    window = rg.RoseWindow()
+    window = rg.RoseWindow(300, 300)
 
-    line1 = rg.Line()
-    line2 = rg.Line()
+    line1 = rg.Line(1, 15)
+    line2 = rg.Line(10, 40)
+
+    line1.start(2)
+    line1.end(6)
 
 
+    line2.thickness = 15
+    line2.start(107)
+    line2.end(200)
+
+    mid = line2.get_midpoint()
 
     line1.attach_to(window)
     line2.attach_to(window)
 
-
     window.render()
 
     window.close_on_mouse_click()
+
+    print(mid)
+    print(mid.x)
+    print(mid.y)
+
 
 
 # ----------------------------------------------------------------------
