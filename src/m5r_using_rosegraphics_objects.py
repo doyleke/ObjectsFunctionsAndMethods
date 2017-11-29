@@ -51,7 +51,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #                radius, center, width of the line?
 #
 #     f. What does a RoseWindow RENDER method do?
-#            draws it
+#            allows you to draw
 #
 #     g. When is a RoseWindow close_on_mouse_click method call necessary?  Why?
 #            It allows you to easily close the window
