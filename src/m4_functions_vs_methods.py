@@ -261,12 +261,12 @@ def try_methods_and_functions():
     draw_many_squares(carol,2,100,30)
 
     carol.speed = 5
-    carol.pen = rg.Pen('red',5)
+    carol.pen.color = ('red')
 
     draw_many_squares(carol,10,50,15)
 
     carol.speed = 100
-    carol.pen = rg.Pen('red',35)
+    carol.pen.thickness = (35)
 
     draw_many_squares(carol, 8 , 300, 60)
 
