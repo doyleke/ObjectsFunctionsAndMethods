@@ -169,7 +169,7 @@ def lines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # ------------------------------------------------------------------
     window = rg.RoseWindow(300, 300)
 
@@ -178,7 +178,6 @@ def lines():
 
     line1.start(2)
     line1.end(6)
-
 
     line2.thickness = 15
     line2.start(107)
@@ -196,8 +195,6 @@ def lines():
     print(mid)
     print(mid.x)
     print(mid.y)
-
-
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
